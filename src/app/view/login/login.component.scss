@@ -1,0 +1,25 @@
+.login-card {
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translate(50%, -50%);
+}
+
+.company {
+  font-size: 60px;
+  font-weight: 600;
+  color: #1877f2;
+  position: absolute;
+  top: 50%;
+  right: 65%;
+  transform: translate(50%, -50%);
+}
+
+.clickable-text {
+  color: #1877f2;
+  font-size: 14px;
+  font-weight: 500;
+}

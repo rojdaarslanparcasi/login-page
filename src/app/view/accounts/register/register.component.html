@@ -1,0 +1,71 @@
+<p-card header="Sign Up" class="register-card">
+  <div class="register-form">
+    <form #registerForm="ngForm" name="registerForm" action="return false;">
+      <div class="p-fluid">
+        <div class="p-field">
+          <label for="username">Username</label>
+          <input id="username"
+                 type="text"
+                 name="username"
+                 class="form-control"
+                 [(ngModel)]="user.username"
+                 [ngClass]="{ 'ng-invalid': !isUsernameValid }"
+                 (keyup)="checkUsernameValidity()"
+                 pInputText>
+        </div>
+        <div class="p-field">
+          <label for="name">Name</label>
+          <input id="name"
+                 type="text"
+                 name="name"
+                 class="form-control"
+                 [(ngModel)]="user.name"
+                 pInputText>
+        </div>
+        <div class="p-field">
+          <label for="username">Surname</label>
+          <input id="surname"
+                 type="text"
+                 name="username"
+                 class="form-control"
+                 [(ngModel)]="user.surname"
+                 pInputText>
+        </div>
+        <div class="p-field">
+          <label for="password">Password</label>
+          <p-password id="password"
+                      name="password"
+                      [(ngModel)]="user.password"
+                      [toggleMask]="true">
+          </p-password>
+        </div>
+        <div class="p-field">
+          <label for="email">Email</label>
+          <input id="email"
+                 type="text"
+                 name="email"
+                 [(ngModel)]="user.email"
+                 [ngClass]="{ 'ng-invalid': !isEmailValid }"
+                 (keyup)="checkEmailValidity()"
+                 pInputText>
+        </div>
+        <div class="p-field">
+          <label for="country">Country</label>
+          <p-dropdown id="country"
+                      [options]="countries"
+                      [(ngModel)]="user.country"
+                      placeholder="Select a country"></p-dropdown>
+        </div>
+      </div>
+    </form>
+  </div>
+  <ng-template pTemplate="footer">
+    <div class="d-grid text-center">
+      <div><p class="info-text">By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy.</p>
+      </div>
+      <p-button label="Sign Up" styleClass="p-button-success p-button-sm" (click)="showBottomCenter()"></p-button>
+    </div>
+  </ng-template>
+</p-card>
+
+<p-toast position="bottom-right" key="bc"></p-toast>

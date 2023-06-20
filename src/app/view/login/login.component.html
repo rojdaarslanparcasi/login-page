@@ -1,0 +1,28 @@
+<p class="company">Guardian Professional</p>
+<p-card class="login-card middle-of-page">
+  <div class="p-fluid">
+    <div class="p-field">
+      <div class="flex flex-column">
+        <label htmlFor="username">Username</label>
+        <input pInputText [(ngModel)]="username"/>
+      </div>
+    </div>
+    <div class="p-field">
+      <div class="flex flex-column">
+        <label htmlFor="password">Password</label>
+        <p-password [(ngModel)]="password"></p-password>
+      </div>
+
+    </div>
+  </div>
+  <ng-template pTemplate="footer">
+    <div class="d-grid text-center">
+      <p-button label="Login" class="d-grid" (click)="login()"></p-button>
+      <a class="clickable-text mt-2" routerLink="/accounts/password/reset">Forgotten password?</a>
+      <hr>
+      <p-button label="Create New Account" styleClass="p-button-success p-button-sm" routerLink="/accounts/register"></p-button>
+    </div>
+  </ng-template>
+</p-card>
+
+<p-toast position="bottom-right" key="wrongUser"></p-toast>

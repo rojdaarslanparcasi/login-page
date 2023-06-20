@@ -1,0 +1,9 @@
+<p-card header="Welcome" class="home-page-card">
+  <div class="text-center">
+    <p>Mr / Mrs {{ user.username }}</p>
+    <input type="text" [formControl]="ipAddressControl" placeholder="Enter IP Address">
+    <p *ngIf="ipAddressControl.invalid && ipAddressControl.dirty" class="error-message">
+      Invalid IP Address
+    </p>
+  </div>
+</p-card>
